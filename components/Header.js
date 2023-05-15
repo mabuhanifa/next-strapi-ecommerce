@@ -1,4 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import Wrapper from "./Wrapper";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -9,7 +12,11 @@ export default function Header() {
     <header
       className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}`}
     >
-      <div></div>
+      <Wrapper>
+        <Link href={"/"}>
+          <Image src="/logo.svg" alt="logo" className="w-[40px] md:[60px]" width={40} height={40} />
+        </Link>
+      </Wrapper>
     </header>
   );
 }
