@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Menu from "./Menu";
 import Wrapper from "./Wrapper";
 
 export default function Header() {
@@ -14,8 +15,15 @@ export default function Header() {
     >
       <Wrapper>
         <Link href={"/"}>
-          <Image src="/logo.svg" alt="logo" className="w-[40px] md:[60px]" width={40} height={40} />
+          <Image
+            src="/logo.svg"
+            alt="logo"
+            className="w-[40px] md:[60px]"
+            width={40}
+            height={40}
+          />
         </Link>
+        <Menu />
       </Wrapper>
     </header>
   );
