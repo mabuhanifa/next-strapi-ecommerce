@@ -6,6 +6,7 @@ import { BsCart } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { VscChromeClose } from "react-icons/vsc";
 import Menu from "./Menu";
+import MobileMenu from "./MobileMenu";
 import Wrapper from "./Wrapper";
 
 export default function Header() {
@@ -28,6 +29,14 @@ export default function Header() {
           />
         </Link>
         <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} />
+        {mobileMenu && (
+          <MobileMenu
+            setShowCatMenu={setShowCatMenu}
+            mobileMenu={mobileMenu}
+            setMobileMenu={setMobileMenu}
+            showCatMenu={showCatMenu}
+          />
+        )}
         <div className="flex items-center gap-2 text-black">
           <div
             className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center

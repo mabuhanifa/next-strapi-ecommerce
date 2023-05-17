@@ -2,7 +2,12 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-export default function MobileMenu({ showCatMenu, setShowCatMenu }) {
+export default function MobileMenu({
+  setShowCatMenu,
+  mobileMenu,
+  setMobileMenu,
+  showCatMenu,
+}) {
   const data = [
     { id: 1, name: "Home", url: "/" },
     { id: 2, name: "About", url: "/about" },
@@ -16,27 +21,30 @@ export default function MobileMenu({ showCatMenu, setShowCatMenu }) {
     { id: 4, name: "Football shoes", doc_count: 107 },
   ];
   return (
-    <ul className="hidden md:flex items-center gap-8 font-medium text-black">
+    <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
       {data.map((item) => {
         return (
           <Fragment key={item.id}>
             {!!item?.subMenu ? (
               <li
-                className="cursor-pointer flex items-center gap-2 relative"
-                onMouseEnter={() => setShowCatMenu(true)}
-                onMouseLeave={() => setShowCatMenu(false)}
+                className="cursor-pointer py-4 px-5 border-b flex flex-col relative"
+                onClick={() => setShowCatMenu(!showCatMenu)}
               >
-                {item.name}
-                <BsChevronDown size={14} />
+                <div className="flex justify-between items-center ">
+                  {item.name}
+                  <BsChevronDown size={14} />
+                </div>
                 {showCatMenu && (
-                  <ul className="bg-white absolute top-6 left-0 min-w-[250px] p-1 text-black shadow-lg">
+                  <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
                     {subMenuData.map((submenu) => (
                       <Link
                         href={"/"}
                         key={submenu.id}
-                        onClick={() => setShowCatMenu(false)}
+                        onClick={() => {
+                          setShowCatMenu(false), setMobileMenu(false);
+                        }}
                       >
-                        <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.1] rounded-md">
+                        <li className="py-4 px-8 border-t flex justify-between">
                           {submenu.name}
                           <span className="text-sm opacity-50">{78}</span>
                         </li>
@@ -46,8 +54,8 @@ export default function MobileMenu({ showCatMenu, setShowCatMenu }) {
                 )}
               </li>
             ) : (
-              <Link href={item.url}>
-                <li className="cursor-pointer">{item.name}</li>
+              <Link href={item?.url} onClick={() => setMobileMenu(false)}>
+                <li className="py-4 px-5 border-b">{item.name}</li>
               </Link>
             )}
           </Fragment>
