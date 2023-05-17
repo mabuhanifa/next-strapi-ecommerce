@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-export default function Menu({ showCatMenu, setShowCatMenu }) {
+export default function MobileMenu({ showCatMenu, setShowCatMenu }) {
   const data = [
     { id: 1, name: "Home", url: "/" },
     { id: 2, name: "About", url: "/about" },
