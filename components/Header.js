@@ -13,7 +13,7 @@ export default function Header() {
     <header
       className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}`}
     >
-      <Wrapper>
+      <Wrapper className={"h-[60px] flex justify-between items-center"}>
         <Link href={"/"}>
           <Image
             src="/logo.svg"
