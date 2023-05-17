@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { BiMenuAltRight } from "react-icons/bi";
 import { BsCart } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { VscChromeClose } from "react-icons/vsc";
 import Menu from "./Menu";
 import Wrapper from "./Wrapper";
 
@@ -31,7 +33,7 @@ export default function Header() {
             className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center
            hover:bg-black/[0.05] cursor-pointer relative"
           >
-            <IoMdHeartEmpty className="text-[19px] md:text-[24px]"/>
+            <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
             <div
               className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full
                bg-red-600 absolute top-1 left-4 md:left-7 text-white text-[10px] 
@@ -52,6 +54,22 @@ export default function Header() {
             >
               5
             </div>
+          </div>
+          <div
+            className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center
+           hover:bg-black/[0.05] cursor-pointer relative -mr-2"
+          >
+            {mobileMenu ? (
+              <VscChromeClose
+                className="text-[16px]"
+                onClick={() => setMobileMenu(false)}
+              />
+            ) : (
+              <BiMenuAltRight
+                className="text-[20px]"
+                onClick={() => setMobileMenu(true)}
+              />
+            )}
           </div>
         </div>
       </Wrapper>
