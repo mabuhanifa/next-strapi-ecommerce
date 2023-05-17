@@ -23,7 +23,7 @@ export default function Header() {
             height={40}
           />
         </Link>
-        <Menu />
+        <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} />
       </Wrapper>
     </header>
   );
