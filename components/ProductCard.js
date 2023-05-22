@@ -11,7 +11,7 @@ export default function ProductCard() {
         <h2 className="text-lg font-medium">Product Name</h2>
         <div className="flex items-center text-black/[0.5]">
           <p className="mr-2 text-lg font-semibold">$20</p>
-          <p className="text-base font-medium line-through">20% off</p>
+          <p className="text-base font-medium line-through">$25</p>
           <p className="ml-auto text-base font-medium text-green-500">20% off</p>
         </div>
       </div>
