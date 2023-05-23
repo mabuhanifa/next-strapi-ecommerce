@@ -23,6 +23,62 @@ export default function ProductDetails() {
             <div className="text-md font-medium text-black/[.5] mb-20">
               {`(Also includes all applicable duties)`}
             </div>
+            <div className="mb-10">
+              <div className="flex justify-between mb-2">
+                <div className="text-md font-semibold">Select Size</div>
+                <div className="text-md font-medium text-black/[.5]">Select Guide</div>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 6
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 7
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 7.5
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 8
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 8.5
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 9
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 9.5
+                </div>
+                <div
+                  className="border rounded-md text-center py-3 font-medium
+                 hover:border-black cursor-pointer"
+                >
+                  UK 10
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Wrapper>
