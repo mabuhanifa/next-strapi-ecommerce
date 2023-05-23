@@ -14,7 +14,7 @@ export default function Header() {
   const [showCatMenu, setShowCatMenu] = useState(false);
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
-  
+
   useEffect(() => {
     const controlNavbar = () => {
       if (window.scrollY > 200) {
@@ -32,7 +32,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY,mobileMenu]);
+  }, [lastScrollY, mobileMenu]);
 
   return (
     <header
@@ -71,21 +71,24 @@ export default function Header() {
               51
             </div>
           </div>
-          <div
-            className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center
-           hover:bg-black/[0.05] cursor-pointer relative"
-          >
-            <BsCart className="text-[15px] md:text-[20px]" />
+          <Link href={"/cart"}>
+            {" "}
             <div
-              className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full
+              className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center
+           hover:bg-black/[0.05] cursor-pointer relative"
+            >
+              <BsCart className="text-[15px] md:text-[20px]" />
+              <div
+                className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full
                bg-red-600 absolute top-1 left-4 md:left-7 text-white text-[10px] 
                md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]"
-            >
-              5
+              >
+                5
+              </div>
             </div>
-          </div>
+          </Link>
           <div
-            className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center
+            className="w-8 md:w-12 h-8 md:h-12 rounded-full md:hidden flex justify-center items-center
            hover:bg-black/[0.05] cursor-pointer relative -mr-2"
           >
             {mobileMenu ? (
