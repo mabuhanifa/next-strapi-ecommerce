@@ -93,6 +93,16 @@ export default function ProductDetails() {
                 Wishlist
                 <IoMdHeartEmpty size={20} />
               </button>
+
+              <div>
+                <div className="text-lg font-bold mb-5">
+                  Product Details
+                </div>
+                <div className="text-md mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas repellat nemo iste culpa veniam, aliquam consequuntur est autem, eum commodi fugit quaerat saepe esse provident vero reiciendis eos, ratione alias ipsum! Reiciendis reprehenderit similique est, perspiciatis eum commodi repellendus iure! Voluptatibus, laborum. Debitis corporis voluptates culpa sapiente perspiciatis et quod ad provident mollitia ut velit dolore libero praesentium dolorem voluptas cumque, tempora dignissimos? quo itaque ipsam consequuntur, veritatis laborum adipisci fugit similique voluptas nam ducimus soluta dolor? Ipsa numquam dolores animi quasi dicta eaque, error qui voluptate amet exercitationem modi a quae velit repellat voluptatum aliquid suscipit porro. Delectus placeat vel itaque est quibusdam dolor, mollitia ullam rem dolorum qui molestias sint, aspernatur vero, illo tempora cupiditate! Facere voluptate beatae dolorum exercitationem, totam cumque rem repellat, reprehenderit error incidunt voluptatibus nulla aliquam, soluta fuga obcaecati perferendis perspiciatis laboriosam ad magnam consequatur adipisci. Labore facere at consectetur! Nihil perspiciatis reiciendis quod molestiae, nesciunt voluptate culpa recusandae tempora debitis odit! Vero nisi, sapiente accusamus sed delectus debitis tempore facilis.
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
