@@ -1,5 +1,6 @@
 import ProductDetailsCarousel from "@/components/ProductDetailsCarousel";
 import Wrapper from "@/components/Wrapper";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function ProductDetails() {
   return (
@@ -26,7 +27,9 @@ export default function ProductDetails() {
             <div className="mb-10">
               <div className="flex justify-between mb-2">
                 <div className="text-md font-semibold">Select Size</div>
-                <div className="text-md font-medium text-black/[.5]">Select Guide</div>
+                <div className="text-md font-medium text-black/[.5]">
+                  Select Guide
+                </div>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <div
@@ -78,6 +81,18 @@ export default function ProductDetails() {
                   UK 10
                 </div>
               </div>
+              <div className="text-red-600 mt-1">
+                Size selection is required
+              </div>
+            </div>
+            <div>
+              <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
+                Add to Cart
+              </button>
+              <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center justify-center gap-2">
+                Wishlist
+                <IoMdHeartEmpty size={20} />
+              </button>
             </div>
           </div>
         </div>
